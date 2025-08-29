@@ -1,6 +1,6 @@
 <?php
 
-namespace Botble\Paystack;
+namespace Botble\Payfast;
 
 use Botble\PluginManagement\Abstracts\PluginOperationAbstract;
 use Botble\Setting\Facades\Setting;
@@ -10,11 +10,11 @@ class Plugin extends PluginOperationAbstract
     public static function remove(): void
     {
         Setting::delete([
-            'payment_paystack_name',
-            'payment_paystack_description',
-            'payment_paystack_secret',
-            'payment_paystack_merchant_email',
-            'payment_paystack_status',
+            'payment_payfast_name',
+            'payment_payfast_description',
+            'payment_payfast_merchant_id',
+            'payment_payfast_merchant_key',
+            'payment_payfast_status',
         ]);
     }
 }
