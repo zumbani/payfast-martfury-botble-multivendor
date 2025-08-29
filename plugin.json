@@ -1,12 +1,12 @@
 {
-    "id": "botble/paystack",
-    "name": "Paystack Payment Gateway",
-    "namespace": "Botble\\Paystack\\",
-    "provider": "Botble\\Paystack\\Providers\\PaystackServiceProvider",
+    "id": "botble/payfast",
+    "name": "Payfast Payment Gateway",
+    "namespace": "Botble\\Payfast\\",
+    "provider": "Botble\\Payfast\\Providers\\PayfastServiceProvider",
     "author": "Botble Technologies",
     "url": "https://botble.com",
     "version": "1.0.3",
-    "description": "Paystack payment gateway integration",
+    "description": "Payfast payment gateway integration",
     "minimum_core_version": "7.3.0",
     "require": [
         "botble/payment"
