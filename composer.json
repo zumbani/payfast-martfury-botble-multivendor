@@ -1,6 +1,6 @@
 {
-    "name": "botble/paystack",
-    "description": "Paystack",
+    "name": "botble/payfast",
+    "description": "Payfast payment gateway integration",
     "type": "package",
     "require": {}
 }
