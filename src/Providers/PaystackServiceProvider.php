@@ -1,11 +1,12 @@
 <?php
 
-namespace Botble\Paystack\Providers;
+namespace Botble\Payfast\Providers;
 
 use Botble\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Support\ServiceProvider;
+use Botble\Payfast\Providers\HookServiceProvider;
 
-class PaystackServiceProvider extends ServiceProvider
+class PayfastServiceProvider extends ServiceProvider
 {
     use LoadAndPublishDataTrait;
 
@@ -15,7 +16,7 @@ class PaystackServiceProvider extends ServiceProvider
             return;
         }
 
-        $this->setNamespace('plugins/paystack')
+        $this->setNamespace('plugins/payfast')
             ->loadHelpers()
             ->loadRoutes()
             ->loadAndPublishViews()
@@ -26,9 +27,9 @@ class PaystackServiceProvider extends ServiceProvider
         $config = $this->app['config'];
 
         $config->set([
-            'paystack.publicKey' => get_payment_setting('public', PAYSTACK_PAYMENT_METHOD_NAME),
-            'paystack.secretKey' => get_payment_setting('secret', PAYSTACK_PAYMENT_METHOD_NAME),
-            'paystack.paymentUrl' => 'https://api.paystack.co',
+            'payfast.merchantId' => get_payment_setting('merchant_id', PAYFAST_PAYMENT_METHOD_NAME),
+            'payfast.merchantKey' => get_payment_setting('merchant_key', PAYFAST_PAYMENT_METHOD_NAME),
+            'payfast.paymentUrl' => 'https://www.payfast.co.za/eng/process',
         ]);
     }
 }
